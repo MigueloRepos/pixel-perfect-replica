@@ -203,12 +203,12 @@ function Index() {
       {/* FAQ */}
       <Section id="faq" eyebrow="Preguntas frecuentes" title="Antes de pedir">
         <Accordion type="single" collapsible className="max-w-3xl">
-          {[
+          {([
             ["¿Con cuánta anticipación debo hacer mi pedido?", "Plazo de anticipación por confirmar con el negocio."],
             ["¿Puedo recoger mi pedido?", "Dirección y horario de recogida por confirmar."],
             ["¿Hacen entregas a domicilio?", "Zonas y condiciones de entrega por confirmar."],
             ["¿Cómo se confirma y se paga un pedido?", "Política de reserva y formas de pago por confirmar."],
-          ].map(([q, a]) => (
+          ] as [string, string][]).map(([q, a]) => (
             <AccordionItem key={q} value={q}>
               <AccordionTrigger className="font-display text-xl md:text-2xl">{q}</AccordionTrigger>
               <AccordionContent className="text-muted-foreground"><Placeholder>Pendiente</Placeholder> {a}</AccordionContent>
